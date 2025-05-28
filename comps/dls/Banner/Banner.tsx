@@ -1,15 +1,16 @@
 import Image from "next/image";
 
 const Banner = () => (
-  <Image
-    src="/real3.webp"
-    alt="img"
-    height="500"
-    width="1200"
-    className=" object-cover overflow-hidden
-       w-full h-[300px] sm:h-[400px] gap-5"
-    // priority // Bu satırı geçici olarak kaldırın veya yorum yapın
-  />
+  <div>
+    <p>Banner Resmi Aşağıda Olmalı:</p>
+    <Image
+      src="/real3.webp" // Bu yolun public klasörünün köküne göre olduğunu teyit ettik
+      alt="Banner Resmi"
+      width={500} // Geçici olarak daha küçük bir boyut verelim
+      height={200} // Geçici olarak daha küçük bir boyut verelim
+    />
+    <p>Banner Resmi Yukarıda Olmalı.</p>
+  </div>
 );
 
 export default Banner;
