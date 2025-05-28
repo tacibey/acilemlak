@@ -64,9 +64,9 @@ const Property = ({ property }: any) => {
         <div className="  md:order-2 sm:mx-0 gap-3">
           <div className="  font-bold">
             AED
-            <span className=" ml-2 text-xl text-sky-800 ">
-              {millify(Number(price))}
-            </span>
+<span className=" ml-2 text-xl text-sky-800 ">
+  {price != null && !isNaN(Number(price)) ? millify(Number(price)) : 'Fiyat Bilgisi Yok'}
+</span>
             {rentFrequency && ` /${rentFrequency}`}
           </div>
         </div>
@@ -85,7 +85,7 @@ const Property = ({ property }: any) => {
             <span title="Bathtub">
               <MdOutlineBathtub />
             </span>
-            |<b>{millify(Number(area))}</b>
+|<b>{area != null && !isNaN(Number(area)) ? millify(Number(area)) : ''}</b>
             <span title="Area">
               <MdGrid4X4 />
             </span>
@@ -131,12 +131,12 @@ const Property = ({ property }: any) => {
             </button>
           </div>
 
-          {/* ==== LOACATION */}
+          {/* ==== LOCATION */}
           <div className="row-start-2 flex gap-2 items-center">
             <MdLocationCity className=" h-5 text-zinc-400" />
-            <span className=" text-zinc-600 text-xs">
-              {location[2].name}, {location[1].name}
-            </span>
+<span className=" text-zinc-600 text-xs">
+  {location && location[1] && location[1].name ? (location[2] && location[2].name ? `${location[2].name}, ${location[1].name}` : location[1].name) : 'Konum Bilgisi Yok'}
+</span>
           </div>
         </div>
 
