@@ -8,7 +8,7 @@ const Banner = () => (
     width="1200"
     className=" object-cover overflow-hidden
        w-full h-[300px] sm:h-[400px] gap-5"
-    priority
+    // priority // Bu satırı geçici olarak kaldırın veya yorum yapın
   />
 );
 
